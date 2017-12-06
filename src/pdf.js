@@ -14,13 +14,12 @@ const dataUrlRegex = /^data:([a-zA-Z0-9!#$%^&\*_\-\+{}\|'.`~]+\/[a-zA-Z0-9!#$%^&
 
 function writePDF(url, filename, _options) {
 
-	const options = { // Default Options
+	const options = Object.assign({ // Default Options
 		format: 'A4',
 		orientation: 'portrait',
 		margin: '1cm',
 		zoom: 1,
-		..._options
-	}
+	}, _options)
 
 	const isDataUrl = dataUrlRegex.exec(url);
 	if (url.indexOf('http://') !== 0 && url.indexOf('https://') !== 0 && !isDataUrl) {

@@ -7,8 +7,6 @@ var options = JSON.parse(system.args[3]);
 
 page.viewportSize = { width: 800, height: 800 };
 
-console.log('opt', options.format);
-
 var size = options.format.split('*');
 page.paperSize =
 	size.length === 2 ?
