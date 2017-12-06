@@ -12,7 +12,7 @@ const marginRegExp = /^((\d)|(\d\.\d))+(in|cm|mm)$/;
 const zoomRegExp = /^\d(\.\d{1,3})?$/;
 const dataUrlRegex = /^data:([a-zA-Z0-9!#$%^&\*_\-\+{}\|'.`~]+\/[a-zA-Z0-9!#$%^&\*_\-\+{}\|'.`~]+)?(;[a-zA-Z0-9]+=[a-zA-Z0-9\-]+)*(;base64)?,/;
 
-function generatePdf(url, filename, _options) {
+function writePDF(url, filename, _options) {
 
 	const options = { // Default Options
 		format: 'A4',
@@ -78,7 +78,7 @@ function generatePdf(url, filename, _options) {
 
 
 function runPhantom(url, filename, _options) {
-	const tmpFile = path.join(__dirname, '../tmp', uuid.v4() + '.pdf');
+	const tmpFile = filename //path.join(__dirname, '../tmp', uuid.v4() + '.pdf');
 	const options = [
 		'--web-security=no',
 		'--ssl-protocol=any',
@@ -114,4 +114,4 @@ function runPhantom(url, filename, _options) {
 	})
 }
 
-exports.makePdf = generatePdf
+exports.writePDF = writePDF
