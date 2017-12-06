@@ -1,42 +1,31 @@
 {
-  "author": "Allan Ebdrup",
-  "name": "html2pdf.it",
-  "version": "2.0.0",
+  "author": "Tony Polinelli",
+  "name": "html2pdf-standalone",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Muscula/html2pdf.it"
+    "url": "https://github.com/tonypee/html2pdf-standalone.it"
   },
   "private": false,
-  "engines": {
-    "node": "^7.5",
-    "npm": "^3.10"
-  },
-  "main": "./lib/app.js",
+  "main": "./src/pdf.js",
   "dependencies": {
-    "compression": "^1.6.2",
-    "express": "",
-    "morgan": "^1.8.0",
+    "cross-spawn": "^5.1.0",
     "node-uuid": "",
+    "phantomjs-prebuilt": "^2.1.16",
     "request": "",
-    "slugify-url": ""
+    "webpage": "^0.3.0"
   },
   "devDependencies": {
-    "mocha": "",
-    "chai": "",
-    "sinon": "",
-    "sinon-chai": "",
-    "underscore": "",
-    "mocha-jshint": "",
-    "open": ""
+    "nodemon": "^1.12.5"
   },
   "scripts": {
-    "start": "node ./lib/app.js",
-    "test": "_mocha"
+    "start": "node ./src/pdf.js",
+    "dev": "nodemon ./src/pdf.js"
   },
   "subdomain": "html2pdf",
   "gitHead": "af60c5959b545ab6c21d19919e1abb503d33c5f6",
   "readmeFilename": "README.md",
-  "description": "html2pdf.it\r ===========\r Using PhantomJS to generate pdfs, via a webservice. Runs using node.js.",
+  "description": "html2pdfStandalone is a port of html2pdf.it\r ===========\r Using PhantomJS to generate pdfs, via a webservice. Runs using node.js.",
   "bugs": {
     "url": "https://github.com/Muscula/html2pdf.it/issues"
   },
