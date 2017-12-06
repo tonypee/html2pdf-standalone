@@ -1,4 +1,4 @@
-![logo](http://html2pdf.it/favicon-32x32.png) [html2pdf.it](http://www.html2pdf.it)
+[html2pdf-standalone]
 ===========
 Based on html2pdf.it, but as a standalone node library (not a webservice). For usage in an existing application. 
 
