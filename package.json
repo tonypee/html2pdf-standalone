@@ -1,7 +1,7 @@
 {
   "author": "Tony Polinelli",
   "name": "html2pdf-standalone",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/tonypee/html2pdf-standalone.it"
